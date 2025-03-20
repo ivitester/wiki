@@ -86,7 +86,12 @@ When the build is complete, you will find the output in the `output/images/` dir
 ./uImage.ssc335
 ```
 
-You can now use `rootfs.squashfs.*` and `uImage.*` with [sysupgrade](./sysupgrade.md) or your preferred update mechanism.
+You can now use `rootfs.squashfs.*` and `uImage.*` with 'sysupgrade --kernel=/tmp/uImage.ssc335 --rootfs=/tmp/rootfs.squashfs.ssc335 -z' or your preferred update mechanism.
 
-After launching, you need to run the commands `modprobe sd_mod` and `modprobe scsi_mod`
+After launching, you need to run the commands 
+'''
+modprobe sd_mod
+modprobe scsi_mod
+modprobe usb-storage
+'''
  
